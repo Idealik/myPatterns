@@ -1,4 +1,9 @@
-import factoryPattern.MyFactoryPattern;
+import GenerativePatterns.BuilderPatternCar;
+import GenerativePatterns.Singleton;
+import GenerativePatterns.factoryPattern.MyFactoryPattern;
+import StructuralPatterns.AdapterPattern;
+import StructuralPatterns.IVectorGraphics;
+import StructuralPatterns.VectorAdapterFromRaster;
 
 public class Main {
 
@@ -21,5 +26,13 @@ public class Main {
         System.out.println(builderPatternCar.getName()
                 + " " + builderPatternCar.getColor()
                 + " " + builderPatternCar.getMaxSpeed());
+
+        System.out.println("GenerativePatterns.Singleton");
+        Object singletone = Singleton.getInstance();
+
+        IVectorGraphics vectorGraphics = new VectorAdapterFromRaster();
+        vectorGraphics.drawCircle();
+        vectorGraphics.drawLine();
+
     }
 }

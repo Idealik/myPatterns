@@ -1,4 +1,4 @@
-package factoryPattern;
+package GenerativePatterns.factoryPattern;
 
 public class RomeWatch implements Watch{
     //Класс, который показывает римское время, реализует интерфейс Watch

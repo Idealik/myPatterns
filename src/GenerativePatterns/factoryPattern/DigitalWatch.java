@@ -1,4 +1,4 @@
-package factoryPattern;
+package GenerativePatterns.factoryPattern;
 
 import java.util.Date;
 

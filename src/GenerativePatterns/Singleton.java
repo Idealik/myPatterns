@@ -1,3 +1,5 @@
+package GenerativePatterns;
+
 public class Singleton {
     //плохо тестировать (антипаттерн?)
     //Гарантирует наличие единственного экземпляра класса.
@@ -11,6 +13,7 @@ public class Singleton {
     }
 
     public static Singleton getInstance() {
+        System.out.println("GenerativePatterns.Singleton was created");
         return new Singleton();
     }
 

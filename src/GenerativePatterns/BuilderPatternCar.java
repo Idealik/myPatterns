@@ -1,3 +1,5 @@
+package GenerativePatterns;
+
 public class BuilderPatternCar {
 
     //задаем параметры машины
@@ -24,7 +26,7 @@ public class BuilderPatternCar {
     }
 
 
-    static class Builder {
+    public static class Builder {
         //задаем параметры для строителя
         private String name;
         private String color;

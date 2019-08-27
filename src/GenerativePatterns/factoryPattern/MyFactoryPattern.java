@@ -1,4 +1,4 @@
-package factoryPattern;
+package GenerativePatterns.factoryPattern;
 
 public class MyFactoryPattern {
 
