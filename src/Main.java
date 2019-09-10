@@ -1,9 +1,10 @@
 import GenerativePatterns.BuilderPatternCar;
 import GenerativePatterns.Singleton;
 import GenerativePatterns.factoryPattern.MyFactoryPattern;
-import StructuralPatterns.AdapterPattern;
-import StructuralPatterns.IVectorGraphics;
-import StructuralPatterns.VectorAdapterFromRaster;
+import StructuralPatterns.*;
+import StructuralPatterns.Composite;
+
+import java.awt.*;
 
 public class Main {
 
@@ -34,5 +35,33 @@ public class Main {
         vectorGraphics.drawCircle();
         vectorGraphics.drawLine();
 
+        //composite
+        //Компоновщик — это структурный паттерн проектирования,
+        //который позволяет сгруппировать множество объектов в древовидную структуру,
+        //а затем работать с ней так, как будто это единичный объект.
+        System.out.println("GenerativePatterns.COMPOSITE");
+        ShapeComposite rec = new RectangleComposite();
+        ShapeComposite rec1 = new RectangleComposite();
+        ShapeComposite rec2 = new RectangleComposite();
+
+        ShapeComposite circle = new CircleComposite();
+        ShapeComposite circle1 = new CircleComposite();
+        ShapeComposite circle2 = new CircleComposite();
+        ShapeComposite circle3 = new CircleComposite();
+
+        Composite composite = new Composite();
+        Composite composite2 = new Composite();
+        Composite composite3 = new Composite();
+        composite.addComponent(rec);
+        composite.addComponent(rec2);
+
+        composite2.addComponent(circle1);
+        composite2.addComponent(rec1);
+        composite.addComponent(composite2);
+        composite3.addComponent(circle);
+        composite3.addComponent(circle2);
+        composite3.addComponent(circle3);
+        composite.addComponent(composite3);
+        composite.draw();
     }
 }
